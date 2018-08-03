@@ -48,16 +48,6 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-  
-  # holiday_hash.each do |holiday, supply|
-  #   supply.each do |attribute, data|
-  #     if attribute == :christmas || attribute == :new_years
-  #         binding.pry
-  #       return data
-  #       # data.map { |key, value| value }
-  #     end
-  #   end
-  # end
  
  holiday_hash[:winter].map do |holiday, supply|
     supply
@@ -73,7 +63,23 @@ def all_supplies_in_holidays(holiday_hash)
   #   Fourth Of July: Fireworks, BBQ
   # etc.
 
-end
+
+  holiday_hash.each do |season, everything|
+        x = season.to_s + ":"
+        puts x.capitalize!
+        everything.each do |holiday, supply|
+        y = holiday.to_s + ": "
+        z = supply.map { |i| + i.to_s + ""}.join(", ")
+        puts y.capitalize! + z.capitalize!   
+        binding.pry
+        end
+      end
+    end
+    
+   
+
+
+
 
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
