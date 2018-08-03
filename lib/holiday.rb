@@ -70,8 +70,8 @@ def all_supplies_in_holidays(holiday_hash)
         everything.each do |holiday, supply|
         y = holiday.to_s + ": "
         z = supply.map { |i| + i.to_s + ""}.join(", ")
-        puts y.capitalize! + z.capitalize!   
-        binding.pry
+        # binding.pry
+        puts y.capitalize! + z   
         end
       end
     end
