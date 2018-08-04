@@ -79,18 +79,17 @@ def all_supplies_in_holidays(holiday_hash)
   # https://www.youtube.com/watch?v=UoTCmeQ19Lw
     
 
-  
-
-    
-   
-
-
-
-
 def all_holidays_with_bbq(holiday_hash)
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
-# .map 
+
+ holiday_hash.map do |season, holiday_and_supplies|
+   holiday_and_supplies.each do |k, v| 
+     if v.include?("BBQ")  
+   return k
+ end
+end
+end
 end
 
 
